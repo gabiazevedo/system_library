@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require('../database/dbConfig');
 
 const BookSchema = new mongoose.Schema({
   title: {
@@ -18,8 +18,7 @@ const BookSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
-});
+},
+{ versionKey: false });
 
-const Book = mongoose.model('Book', BookSchema);
-
-module.exports = Book;
+module.exports = mongoose.model('Book', BookSchema);
