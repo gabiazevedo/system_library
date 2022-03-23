@@ -4,7 +4,7 @@
   "description": "<br /> <p align=\"center\">     <img src=\"https://i.pinimg.com/originals/dd/64/da/dd64da585bc57cb05e5fd4d8ce873f57.png\" alt=\"Logo\" width=\"200\">",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "nodemon --exec 'mocha -R min'",
     "dev": "nodemon index.js"
   },
   "repository": {
