@@ -10,7 +10,7 @@ const createBook = rescue(async (req, res) => {
   const { title } = req.body;
 
   if (await Book.findOne({ title })) {
-    return res.status(400).json({ message: `This title: '${title}' already exists`});
+    return res.status(409).json({ message: `This title: '${title}' already exists`});
   };
   const book = await Book.create(req.body);
   book.save();
